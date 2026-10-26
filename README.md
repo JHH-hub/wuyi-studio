@@ -9,6 +9,7 @@
 - `dist/content.js`：三位成员展示姓名、联系邮箱、研究介绍。
 - `dist/assets/`：已转 WebP 的团队照片、原 Logo 展示稿和重绘的纯路径 `logo.svg`。
 - `dist/logo-animation.css`：网站内联 SVG 的首次描线、字标淡入与悬停动画；支持减少动态偏好。`logo.svg` 为独立静态矢量文件，网站动画由 CSS 控制。
+- 中文字标采用轻量黑体轮廓，图形与英文路径保留；所有字形均已转路径，不依赖访客字体。`tools/refine_wordmark.py` 可从本机字体重建中文字形，字体文件不随网站分发。
 - `dist/dark-theme.css`：深色视觉系统、沉浸式首屏与交互动效；保留基础布局样式，便于独立调整艺术方向。
 
 ## 动态与交互

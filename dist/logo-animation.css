@@ -3,6 +3,7 @@
 .brand-svg .logo-line{stroke-dasharray:1;stroke-dashoffset:0;animation:logo-draw 1.45s cubic-bezier(.3,.1,.2,1) both}
 .brand-svg .logo-line-two{animation-delay:.22s}
 .brand-svg .logo-type{animation:logo-type-in .7s ease-out .55s both}
+.brand-svg .logo-chinese{fill:currentColor;stroke:none}
 .brand:hover .logo-line,.brand:focus-visible .logo-line{animation:logo-hover 1.15s cubic-bezier(.3,.1,.2,1) both}
 .brand:hover .logo-line-two,.brand:focus-visible .logo-line-two{animation-delay:.12s}
 @keyframes logo-draw{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
