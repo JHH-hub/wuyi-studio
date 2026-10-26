@@ -1,0 +1,9 @@
+{
+  "purpose":"AI-generated visual placeholders for the WUYI infinite image field; not client projects or live AI inference.",
+  "generator":"Built-in image_gen",
+  "assets":[
+    {"file":"red-desert.webp","source":"exec-7d0d4576-48fe-49af-a1f6-c9138031f68c.png","prompt":"A cinematic widescreen pale pink salt desert, enormous hovering burgundy crescent monolith, tiny distant figure, coral sky, architectural scale and film grain; no typography."},
+    {"file":"liquid-botanical.webp","source":"exec-2a0856d4-9a63-40ed-8bd3-d9f0b8b4af83.png","prompt":"A cinematic widescreen sculptural liquid-silver flower with translucent petrol-blue petals and a vermilion core, deep forest-green darkness, dramatic softbox reflections; no typography."},
+    {"file":"blue-portal.webp","source":"exec-9b11508a-f34d-4325-858b-f4f0919128f9.png","prompt":"A cinematic widescreen figure in a cobalt coat inside a gigantic white circular architectural portal on a deep blue sea, ivory brutalist geometry and sea mist; no typography."}
+  ]
+}

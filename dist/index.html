@@ -1,74 +1,45 @@
 <!doctype html>
 <html lang="zh-CN">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#090b10">
-  <meta name="description" content="无衣 WUYI，AI 影像创作团队。以人的感受为起点，让想象成为影像。">
-  <title>无衣 WUYI — 让想象，显影。</title>
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="logo-animation.css">
-  <link rel="stylesheet" href="dark-theme.css">
-  <script src="content.js" defer></script>
-  <script src="app.js" defer></script>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#090909">
+  <meta name="description" content="无衣 WUYI，AI 影像创作团队。进入无限影像场，探索不断生长的想象。">
+  <title>无衣 WUYI — 想象，没有终点。</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="field.css">
+  <script src="field-content.js" defer></script><script src="generative.js" defer></script><script src="field.js" defer></script>
 </head>
 <body>
-  <div class="reading-progress" aria-hidden="true"></div>
-  <div class="pointer-aura" aria-hidden="true"></div>
-  <a class="skip-link" href="#main">跳转至正文</a>
+  <a href="#field" class="skip">进入影像场</a>
   <header class="site-header">
-    <a class="brand" href="#home" aria-label="无衣 WUYI 首页"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 210" fill="none" class="brand-svg" aria-hidden="true">
-
-<g stroke="#1c1d1b" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"><path class="logo-line" pathLength="1" d="M145 12H24Q12 12 12 25V172Q12 177 17 172L75 115Q81 109 88 115L113 142Q124 154 133 179"/><path class="logo-line logo-line-two" pathLength="1" d="M144 103L207 41Q213 35 213 44V194Q213 201 205 201H86"/></g>
-<g class="logo-type logo-chinese" fill="#1c1d1b" stroke="none"><path d="M279.9761781460383 42.37907819782495H371.4438114966338V48.46918694976695H327.71103055411703Q327.01501812532365 66.68151216986017 324.63697566027963 78.62972553081303H380.4339720352149V84.77783531848782H334.9611600207146V124.85655100983945Q334.9031589849818 130.65665458311753 337.28120145002583 132.68669083376489Q339.54324184360433 134.89073019161054 345.86535473847744 134.83272915587776H362.1636457793889Q372.95183842568616 135.47074054893835 373.53184878301397 125.43656136716726Q374.40186431900565 119.40445365095803 374.7498705334024 111.16830657690315Q378.46193682030037 112.96633868461936 381.0139823925427 113.66235111341273Q380.49197307094767 123.29052304505436 379.621957534956 128.74262040393577Q378.287933713102 141.386846193682 362.62765406525114 140.86483687208698H343.83531848783014Q327.9430346970481 141.50284826514758 328.5230450543759 125.55256343863282V84.77783531848782H323.30295183842566Q315.93682030036246 123.00051786639045 274.87208700155355 145.62092180217502Q274.06007250129466 144.69290523045052 272.0300362506473 142.48886587260486Q270.63801139306054 140.98083894355256 270.0 140.28482651475917Q309.67270844122214 119.63645779388916 316.63283272915584 84.77783531848782H271.04401864319004V78.62972553081303H318.19886069394096Q320.7509062661833 66.21750388399792 321.27291558777836 48.46918694976695H279.9761781460383Z"/><path d="M412.190056965303 121.11548420507508Q409.9860176074573 117.92542723977213 408.01398239254274 115.77938891765923Q444.20662868979804 96.46504401864318 464.1009839461419 65.55049197307095H413.3500776799586V59.46038322112895H519.5499741066805V65.55049197307095H471.4671154842051Q470.8291040911445 66.47850854479543 469.66908337648886 68.27654065251164Q468.7410668047644 69.72656654583118 468.27705851890215 70.42257897462454Q473.14914552045576 89.62092180217503 479.9932677369239 101.16312791299845Q495.82755049197306 91.70895908855515 509.34179181771106 81.2107716209218L513.865872604868 86.19886069394096Q496.87156913516316 98.20507509062662 483.24132573795964 106.26721905748316Q494.37752459865357 122.91351631279129 521.0 136.9497669601243Q518.7959606421543 139.15380631796995 516.4759192128431 142.51786639047126Q472.279129984464 119.66545831175556 463.6369756602797 76.80269290523044Q455.74883480062147 87.59088555152769 446.52667011910927 96.40704298291041V140.13982392542724Q457.4308648368721 136.19575349559813 475.469186949767 129.06162610046607Q475.3531848783014 130.91765924391507 475.5851890212325 134.91973070947694Q475.6431900569653 135.7317452097359 475.6431900569653 136.19575349559813Q462.9409632314863 140.54583117555669 450.4127395132056 145.7079233557742Q443.39461418953914 148.66597617814602 441.306576903159 150.0L437.0145002589332 144.02589331952356Q440.1465561885034 141.64785085447954 440.20455722423617 136.83376488865872V102.09114448472293Q428.1983428275505 112.2413257379596 412.190056965303 121.11548420507508ZM459.11289487312274 39.85603314344898 464.9129984464008 38.0Q469.8430864836872 48.382185396167785 473.14914552045576 56.8503366131538L466.5950284826515 58.9963749352667Q463.6369756602797 50.180217503883995 459.11289487312274 39.85603314344898Z"/></g>
-<g class="logo-type" stroke="#1c1d1b" stroke-width="2.8" stroke-linecap="square"><path d="M285 175L291 194L298 178L305 194L311 175M345 175V187Q345 194 352 194Q359 194 359 187V175M401 175L409 185L417 175M409 185V194M461 175V194"/></g>
-</svg>
-
-</a>
-    <span class="header-note">INDEPENDENT MINDS.<br>SHARED IMAGINATION.</span>
-    <button class="menu-toggle" aria-expanded="false" aria-controls="navigation">菜单 <span>＋</span></button>
-    <nav id="navigation" aria-label="主导航"><a href="#explorations">视觉探索 <sup>01</sup></a><a href="#studio">关于无衣 <sup>02</sup></a><a href="#people">创作伙伴 <sup>03</sup></a><a class="nav-contact" href="#contact">聊聊想法 <span>↗</span></a></nav>
+    <a href="#" class="brand" id="brand-home" aria-label="无衣 WUYI，回到起点">
+      <svg class="brand-symbol" viewBox="0 0 225 210" fill="none" aria-hidden="true"><g stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"><path pathLength="1" d="M145 12H24Q12 12 12 25V172Q12 177 17 172L75 115Q81 109 88 115L113 142Q124 154 133 179"/><path pathLength="1" d="M144 103L207 41Q213 35 213 44V194Q213 201 205 201H86"/></g></svg>
+      <span class="brand-word"><strong>WUYI</strong><small>FILM & ART STUDIO</small></span>
+    </a>
+    <span class="header-aside"><i class="status-dot"></i> AN OPEN FIELD OF IMAGINATION</span>
+    <nav aria-label="主导航"><button id="index-open">实验索引</button><button id="studio-open">关于无衣</button><button id="brief-open" class="nav-contact">开始共创 <span>↗</span></button></nav>
   </header>
-  <main id="main">
-    <section class="hero" id="home" aria-labelledby="hero-title">
-      <div class="hero-heading"><div class="hero-kicker"><span class="signal-dot"></span> WUYI — AI FILM & ART STUDIO</div><h1 id="hero-title"><span class="title-line">想象无界<span class="red-dot">。</span></span><span class="title-line">影像有感<span class="red-dot">。</span></span></h1><div class="hero-intro"><span class="eyebrow">HUMAN IDEAS. NEW POSSIBILITIES.</span><p>以人的感受为起点，<br>探索 AI 影像的更多可能。</p><a class="hero-cta" href="#explorations">进入无衣的视野 <span>↗</span></a></div></div>
-      <div class="hero-stage" data-art="ribbon">
-        <span class="stage-word" aria-hidden="true">WUYI</span><canvas class="art-canvas" aria-label="缓慢旋转的三维线束光环，随指针产生轻微空间视差"></canvas>
-        <div class="stage-top"><span>EXPERIMENT NO. 001</span><span>FORM / LIGHT / MOTION</span></div>
-        <div class="stage-bottom"><span><i class="live-dot"></i> 无形，成像。</span><div class="stage-controls"><div class="art-modes" role="group" aria-label="切换主视觉形态"><button data-mode="ribbon" aria-pressed="true" aria-label="形态一：织光">01</button><button data-mode="light" aria-pressed="false" aria-label="形态二：折光">02</button><button data-mode="echo" aria-pressed="false" aria-label="形态三：共振">03</button></div><button class="motion-toggle" aria-pressed="false">暂停动态 <span>Ⅱ</span></button></div><span class="frame-counter" aria-hidden="true">00:00:00</span></div>
-      </div>
-      <div class="hero-caption"><span>AI FILM & VISUAL EXPLORATION</span><a href="#explorations">向下，走进我们的视野 <span>↓</span></a></div>
-    </section>
-    <div class="motion-strip" aria-hidden="true"><div class="motion-strip-track"><span>HUMAN IDEAS <i>✳</i> MACHINE POSSIBILITIES <i>✳</i> SHARED IMAGINATION <i>✳</i></span><span>HUMAN IDEAS <i>✳</i> MACHINE POSSIBILITIES <i>✳</i> SHARED IMAGINATION <i>✳</i></span></div></div>
-    <section class="explorations section-pad" id="explorations" aria-labelledby="explore-title">
-      <div class="section-top"><span class="section-index">01 / VISUAL EXPLORATIONS</span><span>关于形态、光与想象的习作</span></div>
-      <div class="section-heading"><h2 id="explore-title">画面之外，<br>还有可能。</h2><p>从一束光、一种材质、一段运动开始。<br>让直觉成为画面，让画面生长出叙事。</p></div>
-      <div class="study-grid">
-        <button class="study study-wide" data-study="0" aria-label="打开视觉研究：无形之形"><span class="study-art" data-art="ribbon"><canvas class="art-canvas" aria-hidden="true"></canvas><span class="study-open">↗</span><span class="study-label">FORM STUDY / 001</span></span><span class="study-meta"><span>无形之形 <small>FORM IN FLUX</small></span><span>视觉研究 ↗</span></span></button>
-        <button class="study" data-study="1" aria-label="打开视觉研究：光的切面"><span class="study-art light-study" data-art="light"><canvas class="art-canvas" aria-hidden="true"></canvas><span class="study-open">↗</span><span class="study-label">LIGHT STUDY / 002</span></span><span class="study-meta"><span>光的切面 <small>A SLICE OF LIGHT</small></span><span>视觉研究 ↗</span></span></button>
-        <button class="study" data-study="2" aria-label="打开视觉研究：同频"><span class="study-art" data-art="echo"><canvas class="art-canvas" aria-hidden="true"></canvas><span class="study-open">↗</span><span class="study-label">MOTION STUDY / 003</span></span><span class="study-meta"><span>同频 <small>IN RESONANCE</small></span><span>视觉研究 ↗</span></span></button>
-      </div>
-      <p class="study-note">以上为本站的程序化视觉习作，非客户项目。</p>
-    </section>
-    <section class="studio section-pad" id="studio" aria-labelledby="studio-title">
-      <div class="section-top"><span class="section-index">02 / THE STUDIO</span><span>不同的视角，同一个方向。</span></div>
-      <div class="studio-body"><div class="studio-verse"><span class="eyebrow">OUR NAME, OUR SPIRIT.</span><h2 id="studio-title">岂曰无衣，<br><span>与子同袍。</span></h2></div><div class="studio-copy"><p class="lead">无衣，是一群创作者的共同署名。</p><p>我们以 AI 为创作媒介，关注画面中的情绪、节奏，以及故事抵达人的方式。工具不断变化，而审美、判断与表达，始终来自人。</p><p>“同袍”是我们对协作的理解：带着各自的视角，共同完成一个人的想象无法抵达的画面。</p><div class="studio-tags"><span>AI 影像</span><span>视觉叙事</span><span>共同创作</span></div></div></div>
-      <div class="practice-list"><div><span>01</span><h3>从想法开始</h3><p>概念 · 故事 · 视觉方向</p></div><div><span>02</span><h3>让画面发生</h3><p>影像生成 · 风格探索 · 动态表达</p></div><div><span>03</span><h3>把感受留下</h3><p>节奏 · 剪辑 · 视听整合</p></div></div>
-    </section>
-    <section class="people section-pad" id="people" aria-labelledby="people-title">
-      <div class="section-top"><span class="section-index">03 / THE PEOPLE</span><span>创作的背后，是具体的人。</span></div>
-      <div class="section-heading"><h2 id="people-title">各有视角，<br>一起成像。</h2><p>保持独立的感受。<br>也相信共同创作的力量。</p></div>
-      <div class="people-grid">
-        <figure class="person"><div class="person-photo"><img src="assets/member-01.webp" alt="无衣团队成员，白色外套，在绿叶墙前的人像" loading="lazy" width="1200" height="1600"><span>01</span></div><figcaption><span data-member="0">创作伙伴 01</span><small>WUYI COLLECTIVE</small></figcaption></figure>
-        <figure class="person"><div class="person-photo"><img src="assets/member-02.webp" alt="无衣团队成员，戴帽子与墨镜的户外人像" loading="lazy" width="1400" height="1050"><span>02</span></div><figcaption><span data-member="1">创作伙伴 02</span><small>WUYI COLLECTIVE</small></figcaption></figure>
-        <figure class="person"><div class="person-photo"><img src="assets/member-03.webp" alt="无衣团队成员，黑色背景前身着西装的人像" loading="lazy" width="900" height="1441"><span>03</span></div><figcaption><span data-member="2">创作伙伴 03</span><small>WUYI COLLECTIVE</small></figcaption></figure>
-      </div>
-    </section>
-    <section class="contact section-pad" id="contact" aria-labelledby="contact-title"><div class="section-top"><span class="section-index">04 / START A CONVERSATION</span><span>一个想法，可以是开始。</span></div><div class="contact-body"><h2 id="contact-title">下一帧，<br>一起想象<span>。</span></h2><button class="contact-button" id="brief-open" aria-label="填写项目想法">↗</button></div><div class="contact-foot"><p>关于一段影像，或一个还没成形的念头。</p><span id="contact-detail">先写下你的项目想法</span></div></section>
+  <main class="field-shell" id="main">
+    <canvas id="field" class="field" tabindex="0" aria-label="无衣无限影像场：拖动平移，滚轮或双指缩放。也可用方向键平移，加减键缩放，回车查看中心画面；实验索引提供列表浏览。" aria-describedby="field-instructions">你的浏览器不支持画布，请使用顶部的实验索引浏览影像。</canvas>
+    <div class="field-shade" aria-hidden="true"></div>
+    <div class="field-corner" aria-hidden="true"><span>WUYI / OPEN EXPERIMENT</span><span>IMAGES IN THE MAKING</span></div>
+    <div class="seed-status" aria-hidden="true">COMPOSITION <span id="seed-label">00000000</span></div>
+    <div class="intro"><div class="intro-kicker"><i></i> 无衣 · 无限影像场 <i></i></div><h1>想象，没有终点<span>。</span></h1><p>每一帧，都是另一种可能。</p><span class="intro-caption">DRAG TO WANDER. STAY TO DISCOVER.</span></div>
+    <div class="field-tooltip" id="field-tooltip" aria-hidden="true"></div>
   </main>
-  <footer><a href="#home" class="footer-name">无衣 <span>WUYI</span></a><span>© <span id="year">2026</span> WUYI STUDIO</span><a href="#home">回到顶部 ↑</a></footer>
-  <dialog id="study-dialog" class="study-dialog"><button class="dialog-close" aria-label="关闭视觉研究">关闭 ×</button><div class="dialog-art" data-art="ribbon"><canvas class="art-canvas" aria-hidden="true"></canvas></div><div class="dialog-text"><span class="eyebrow">WUYI / VISUAL EXPLORATION</span><h2></h2><p></p><small>本站程序化视觉习作 · 非客户项目</small></div></dialog>
-  <dialog id="brief-dialog" class="brief-dialog"><button class="dialog-close" aria-label="关闭项目想法">关闭 ×</button><span class="eyebrow">A NEW FRAME STARTS HERE.</span><h2>说说你的想法。</h2><p class="form-note" id="brief-note">当前为网站预览：信息仅用于下载项目简报，不会上传或发送。</p><form id="brief-form"><label>怎么称呼你<input name="name" autocomplete="name" maxlength="80" required placeholder="姓名 / 团队名称"></label><label>联系方式<input name="contact" maxlength="160" required placeholder="邮箱 / 微信"></label><label>想一起做些什么<textarea name="idea" rows="4" maxlength="4000" required placeholder="内容、用途、风格，或任何最初的想法…"></textarea></label><button class="submit-brief" type="submit">下载项目简报 <span>↗</span></button><p role="status" id="form-status"></p></form></dialog>
+  <div class="field-controls" role="group" aria-label="影像场控制">
+    <button id="new-seed" class="new-seed">另一种可能 <span>↗</span></button>
+    <button id="pause" aria-pressed="false">暂停生长</button><span class="control-divider" aria-hidden="true"></span>
+    <button id="zoom-out" class="zoom-control" aria-label="缩小影像场">−</button><span class="zoom-value" id="zoom-value" aria-hidden="true">100%</span><button id="zoom-in" class="zoom-control" aria-label="放大影像场">＋</button><button id="reset" aria-label="回到影像场起点">归位</button>
+  </div>
+  <footer class="bottom-bar"><div class="instructions" id="field-instructions"><span>拖动探索</span><span>滚轮 / 双指缩放</span><span>点击画面展开</span></div><span class="bottom-signature">IMAGINATION <em>∞</em></span><span class="placeholder-note">生成占位与实时程序纹理 · 非客户作品</span></footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <dialog id="studio-dialog" class="panel"><div class="panel-head"><span class="eyebrow">WUYI / THE COLLECTIVE</span><button class="close" aria-label="关闭关于无衣">关闭 ×</button></div><h2>不同视角，<br>共同打开可能。</h2><p class="lead">无衣，是一群创作者的共同署名。</p><p>我们以 AI 为创作媒介，探索影像、叙事与想象之间的边界。工具带来新的可能，而感受、判断和表达，始终来自人。</p><p>这里是一片正在生长的影像实验场。每次相遇，都可以是另一种构图、另一种形态、另一段故事的开始。</p><div class="team-grid" id="team-grid"></div><div class="studio-quote">岂曰无衣，与子同袍。<span>INDEPENDENT MINDS.<br>SHARED IMAGINATION.</span></div></dialog>
+
+  <dialog id="index-dialog" class="panel index-panel"><div class="panel-head"><span class="eyebrow">WUYI / EXPERIMENT INDEX</span><button class="close" aria-label="关闭实验索引">关闭 ×</button></div><h2>一些可能，<br>正在显影。</h2><p class="index-intro">三组 AI 生成占位与实时程序纹理。用于探索网站的视觉语言，后续可替换为团队作品。</p><div class="index-grid" id="index-grid"></div></dialog>
+
+  <dialog id="frame-dialog" class="frame-dialog"><button class="close" aria-label="关闭画面">关闭 ×</button><canvas id="frame-preview" class="frame-preview" aria-label="所选视觉实验的大图"></canvas><div class="frame-info"><div><h2 id="frame-title"></h2><p id="frame-note"></p></div><button id="save-frame" class="save-frame">保存这一帧 ↗</button></div></dialog>
+
+  <dialog id="brief-dialog" class="panel brief-panel"><div class="panel-head"><span class="eyebrow">A NEW POSSIBILITY STARTS HERE</span><button class="close" aria-label="关闭项目想法">关闭 ×</button></div><h2>下一种可能，<br>一起创造。</h2><p class="brief-note">当前为网站预览。填写后可下载项目简报，信息不会上传或发送。</p><form id="brief-form"><label>怎么称呼你<input name="name" maxlength="80" autocomplete="name" placeholder="姓名 / 团队名称" required></label><label>联系方式<input name="contact" maxlength="160" placeholder="邮箱 / 微信" required></label><label>你的想法<textarea name="idea" maxlength="4000" rows="4" placeholder="一段影像、一个故事，或还没成形的念头…" required></textarea></label><button class="submit" type="submit">下载项目简报 <span>↗</span></button><p id="form-status" role="status"></p></form></dialog>
+  <noscript><div class="field-help"><div class="help-card"><h2>无衣 WUYI</h2><p>无限影像场需要 JavaScript。你仍可以直接查看生成占位：</p><p><a href="assets/experiments/red-desert.webp">赤色引力 ↗</a><br><a href="assets/experiments/liquid-botanical.webp">液态生长 ↗</a><br><a href="assets/experiments/blue-portal.webp">世界的另一侧 ↗</a></p></div></div></noscript>
 </body>
 </html>

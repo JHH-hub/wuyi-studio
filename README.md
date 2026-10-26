@@ -1,29 +1,42 @@
-# 无衣 WUYI 网站
+# 无衣 WUYI · 无限影像场
 
-深色 AI 影像艺术工作室网站。石墨黑、冷白和克制的蓝紫光色，HTML / CSS / JavaScript 独立，无框架、无外部字体或 CDN 依赖。
+AI 影像艺术工作室的全屏交互网站。石墨黑、暖白与少量浅青柠，保留选定的线形图标，以 WUYI 英文字标搭配。HTML、CSS、JavaScript 独立，无框架、外部字体或 CDN 依赖。
 
-`dist/index.html` 为入口，可直接双击打开。HTML、CSS、JS 独立，无需安装依赖。
+## 预览
 
-- `dist/styles.css`：布局、字体、响应式、配色。
-- `dist/app.js`：动态 KV、菜单、视觉研究弹窗、项目简报下载。
-- `dist/content.js`：三位成员展示姓名、联系邮箱、研究介绍。
-- `dist/assets/`：已转 WebP 的团队照片、原 Logo 展示稿和重绘的纯路径 `logo.svg`。
-- `dist/logo-animation.css`：网站内联 SVG 的首次描线、字标淡入与悬停动画；支持减少动态偏好。`logo.svg` 为独立静态矢量文件，网站动画由 CSS 控制。
-- 中文字标采用轻量黑体轮廓，图形与英文路径保留；所有字形均已转路径，不依赖访客字体。`tools/refine_wordmark.py` 可从本机字体重建中文字形，字体文件不随网站分发。
-- `dist/dark-theme.css`：深色视觉系统、沉浸式首屏与交互动效；保留基础布局样式，便于独立调整艺术方向。
+在仓库目录运行 `python -m http.server 4178 --bind 127.0.0.1 --directory dist`，打开 http://127.0.0.1:4178/ 。也可以直接打开 `dist/index.html`。
 
-## 动态与交互
+## 浏览方式
 
-- 首屏三种可切换的程序化光影；三维线束通过 Canvas 投影绘制，不依赖视频下载。
-- SVG Logo 描线、标题分行入场、滚动渐入、页面阅读进度、导航定位。
-- 作品轻量视差与跟随高光、人物照片缓慢缩放、联系按钮轻微吸附。
-- 全局暂停同时控制持续 CSS 动效与 Canvas 时间；减少动态偏好自动静止。触屏关闭指针光环、卡片倾斜与磁吸效果。
-- Canvas 仅绘制视口内内容，暂停时仅在尺寸/页面状态改变后重绘，页面隐藏时停止绘制。设备像素比上限 1.5。
+- 拖动平移，滚轮或双指缩放；Shift + 滚轮横向平移。
+- 方向键平移，+ / - 缩放，Home 归位，空格暂停，Enter 打开离中心最近的一帧。
+- “另一种可能”切换随机种子并重新构图；URL 可指定数值种子，如 `?seed=261026`。
+- 闲置后空间缓慢漂移，每约六秒重排一张可见画面，通过扫描显影过渡。暂停按钮停止漂移和自动更新，仍可主动浏览。
+- 点击画面展开并保存 PNG；实验索引提供固定列表，关于无衣展示三张原团队照片。
+- “开始共创”仅下载本地 TXT 简报，不上传表单。真实成员姓名及联系渠道尚未提供。
 
-照片仅对应提供的三张图片，未推测成员身份、职位。无真实案例、客户、奖项或联系方式时不虚构，视觉研究标注为本站程序化习作。
+## 文件与内容替换
 
-联系功能当前为诚实的本地简报下载，不发送数据。填写 content.js 的 email 后会显示邮箱链接；如需服务器收件应另行接入。
+- `dist/index.html`：页面结构、导航、弹窗、SVG 图标。
+- `dist/field.css`：全站布局、响应式、Logo 描线和过渡。
+- `dist/field.js`：无限影像场、拖动缩放、显影、画面预览和简报下载。
+- `dist/generative.js`：可复现种子的三类程序纹理、图像绘制工具。
+- `dist/field-content.js`：成员、影像地址、标题和占位说明。替换图片时修改 `images` 中对应的 `src`、`title`、`note`；目前图像组合按三张设计。
+- `dist/assets/experiments/`：三张 AI 生成 WebP 占位。`provenance.json` 记录生成工具、原文件名和提示词摘要。
+- `dist/assets/member-*.webp`：用户提供的团队照片。未推测成员身份或职位。
 
-设计参考研究：https://panoply.co.uk/ 、https://mvsm.com/ 、https://liminal-studio.ai/ 、https://latentlayer.studio/ 。只参考艺术/AI 工作室的信息组织与影像表达，不复制其素材、客户或业绩声明。
+## 占位与性能边界
 
-预览：在 dist 下运行 `python -m http.server 4178`，打开 http://localhost:4178 。
+三张超现实影像由内置 imagegen 预先生成，另外三类纹理由浏览器程序绘制。无限延展指空间与构图的持续变化，并非调用模型生成无限新内容。页面已标注占位与实验性质，未虚构客户案例、业绩或奖项。上线正式作品时应同步更新说明。
+
+画布只绘制视口内帧，缓存限制约 80–100 个布局对象，设备像素比上限 1.5，桌面约 35 FPS、触屏约 25 FPS。页面隐藏时不绘制；暂停后仅在交互或显示状态改变时重绘。尊重系统“减少动态”偏好，默认暂停持续运动。移动端使用更紧凑的空间间距。双指手势已实现，浏览器预览验证涵盖拖动、按钮和键盘，真机触控仍需后续设备确认。
+
+## 设计研究
+
+参考 Infinite Canvas 的无限媒体空间、Paper Warp 的流动纹理以及 Radiant Feedback Loop 的形态延展；本项目交互和纹理为独立 Canvas 2D 实现，未复制其代码或素材。
+
+- https://github.com/edoardolunardi/infinite-canvas
+- https://github.com/paper-design/shaders
+- https://github.com/pbakaus/radiant
+
+上一版页面备份位于被 Git 忽略的 `artifacts/previous-site/`，Git 历史也保留了之前的版本。
