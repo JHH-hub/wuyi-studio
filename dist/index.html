@@ -3,16 +3,19 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#eeede7">
+  <meta name="theme-color" content="#090b10">
   <meta name="description" content="无衣 WUYI，AI 影像创作团队。以人的感受为起点，让想象成为影像。">
   <title>无衣 WUYI — 让想象，显影。</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="logo-animation.css">
+  <link rel="stylesheet" href="dark-theme.css">
   <script src="content.js" defer></script>
   <script src="app.js" defer></script>
 </head>
 <body>
+  <div class="reading-progress" aria-hidden="true"></div>
+  <div class="pointer-aura" aria-hidden="true"></div>
   <a class="skip-link" href="#main">跳转至正文</a>
   <header class="site-header">
     <a class="brand" href="#home" aria-label="无衣 WUYI 首页"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 210" fill="none" class="brand-svg" aria-hidden="true">
@@ -28,14 +31,15 @@
   </header>
   <main id="main">
     <section class="hero" id="home" aria-labelledby="hero-title">
-      <div class="hero-heading"><h1 id="hero-title">让想象<span class="hero-comma">，</span><br class="mobile-break">显影<span class="red-dot">。</span></h1><div class="hero-intro"><span class="eyebrow">无衣 / WUYI STUDIO</span><p>以人的感受为起点，<br>探索 AI 影像的更多可能。</p></div></div>
+      <div class="hero-heading"><div class="hero-kicker"><span class="signal-dot"></span> WUYI — AI FILM & ART STUDIO</div><h1 id="hero-title"><span class="title-line">想象无界<span class="red-dot">。</span></span><span class="title-line">影像有感<span class="red-dot">。</span></span></h1><div class="hero-intro"><span class="eyebrow">HUMAN IDEAS. NEW POSSIBILITIES.</span><p>以人的感受为起点，<br>探索 AI 影像的更多可能。</p><a class="hero-cta" href="#explorations">进入无衣的视野 <span>↗</span></a></div></div>
       <div class="hero-stage" data-art="ribbon">
-        <span class="stage-word" aria-hidden="true">WUYI</span><canvas class="art-canvas" aria-label="随光流动的银色线束，构成无衣网站的动态主视觉"></canvas>
+        <span class="stage-word" aria-hidden="true">WUYI</span><canvas class="art-canvas" aria-label="缓慢旋转的三维线束光环，随指针产生轻微空间视差"></canvas>
         <div class="stage-top"><span>EXPERIMENT NO. 001</span><span>FORM / LIGHT / MOTION</span></div>
-        <div class="stage-bottom"><span><i class="live-dot"></i> 无形，成像。</span><button class="motion-toggle" aria-pressed="false">暂停动态 <span>Ⅱ</span></button><span class="frame-counter" aria-hidden="true">00:00:00</span></div>
+        <div class="stage-bottom"><span><i class="live-dot"></i> 无形，成像。</span><div class="stage-controls"><div class="art-modes" role="group" aria-label="切换主视觉形态"><button data-mode="ribbon" aria-pressed="true" aria-label="形态一：织光">01</button><button data-mode="light" aria-pressed="false" aria-label="形态二：折光">02</button><button data-mode="echo" aria-pressed="false" aria-label="形态三：共振">03</button></div><button class="motion-toggle" aria-pressed="false">暂停动态 <span>Ⅱ</span></button></div><span class="frame-counter" aria-hidden="true">00:00:00</span></div>
       </div>
       <div class="hero-caption"><span>AI FILM & VISUAL EXPLORATION</span><a href="#explorations">向下，走进我们的视野 <span>↓</span></a></div>
     </section>
+    <div class="motion-strip" aria-hidden="true"><div class="motion-strip-track"><span>HUMAN IDEAS <i>✳</i> MACHINE POSSIBILITIES <i>✳</i> SHARED IMAGINATION <i>✳</i></span><span>HUMAN IDEAS <i>✳</i> MACHINE POSSIBILITIES <i>✳</i> SHARED IMAGINATION <i>✳</i></span></div></div>
     <section class="explorations section-pad" id="explorations" aria-labelledby="explore-title">
       <div class="section-top"><span class="section-index">01 / VISUAL EXPLORATIONS</span><span>关于形态、光与想象的习作</span></div>
       <div class="section-heading"><h2 id="explore-title">画面之外，<br>还有可能。</h2><p>从一束光、一种材质、一段运动开始。<br>让直觉成为画面，让画面生长出叙事。</p></div>
