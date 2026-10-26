@@ -1,0 +1,12 @@
+/* Logo lettering uses paths, independent of installed fonts. */
+.brand-svg{display:block;width:151px;height:62px;overflow:visible}
+.brand-svg .logo-line{stroke-dasharray:1;stroke-dashoffset:0;animation:logo-draw 1.45s cubic-bezier(.3,.1,.2,1) both}
+.brand-svg .logo-line-two{animation-delay:.22s}
+.brand-svg .logo-type{animation:logo-type-in .7s ease-out .55s both}
+.brand:hover .logo-line,.brand:focus-visible .logo-line{animation:logo-hover 1.15s cubic-bezier(.3,.1,.2,1) both}
+.brand:hover .logo-line-two,.brand:focus-visible .logo-line-two{animation-delay:.12s}
+@keyframes logo-draw{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
+@keyframes logo-hover{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
+@keyframes logo-type-in{from{opacity:0;transform:translateY(3px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:640px){.brand-svg{width:129px;height:53px}}
+@media(prefers-reduced-motion:reduce){.brand-svg .logo-line,.brand-svg .logo-type,.brand:hover .logo-line,.brand:focus-visible .logo-line{animation:none;stroke-dashoffset:0}}
