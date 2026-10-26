@@ -32,6 +32,9 @@ body::after{opacity:.018}
 .no-webgl .field-shell{background:linear-gradient(#06080830,#06080880),url('assets/experiments/blue-portal.webp') center/cover}
 .no-webgl #field{opacity:0}
 .no-webgl .field-controls button:disabled{opacity:.35;cursor:default}
+.local-preview-note{position:fixed;z-index:35;bottom:110px;left:50%;transform:translateX(-50%);width:520px;max-width:calc(100vw - 40px);padding:19px 24px;border:1px solid #dce5c240;background:#101710ee;font-size:12px;line-height:1.8;backdrop-filter:blur(18px)}
+.local-preview-note[hidden]{display:none}.local-preview-note strong{font-weight:400;color:#e0e6c4}.local-preview-note p{color:#c0c6b6;margin:7px 0}.local-preview-note a{color:#e0e6c4;border-bottom:1px solid #9aa78b}
+.local-file .field-controls{display:none}
 .frame-dialog{overflow:auto}
 .frame-preview{max-height:70dvh;object-fit:contain;background:#090b09}
 @media(min-width:1800px){.intro{bottom:22%;left:8%}.intro h1{font-size:110px}}
