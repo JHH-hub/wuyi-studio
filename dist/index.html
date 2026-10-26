@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#090909">
   <meta name="description" content="无衣 WUYI，AI 影像创作团队。进入无限影像场，探索不断生长的想象。">
-  <title>无衣 WUYI — 想象，没有终点。</title>
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="field.css">
-  <script src="field-content.js" defer></script><script src="generative.js" defer></script><script src="field.js" defer></script>
+  <title>无衣 WUYI — 想象，无限发生。</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="field.css"><link rel="stylesheet" href="spatial.css">
+  <script src="field-content.js" defer></script><script src="generative.js" defer></script><script src="space.js" defer></script><script src="field.js" defer></script>
 </head>
 <body>
   <a href="#field" class="skip">进入影像场</a>
@@ -18,24 +18,24 @@
     <nav aria-label="主导航"><button id="index-open">实验索引</button><button id="studio-open">关于无衣</button><button id="brief-open" class="nav-contact">开始共创 <span>↗</span></button></nav>
   </header>
   <main class="field-shell" id="main">
-    <canvas id="field" class="field" tabindex="0" aria-label="无衣无限影像场：拖动平移，滚轮或双指缩放。也可用方向键平移，加减键缩放，回车查看中心画面；实验索引提供列表浏览。" aria-describedby="field-instructions">你的浏览器不支持画布，请使用顶部的实验索引浏览影像。</canvas>
+    <canvas id="field" class="field" tabindex="0" aria-label="无衣三维影像场：拖动游移，滚轮或双指前后穿行。也可用方向键游移，W S 或加减键前后穿行，回车查看中心画面；实验索引提供列表浏览。" aria-describedby="field-instructions">你的浏览器不支持画布，请使用顶部的实验索引浏览影像。</canvas>
     <div class="field-shade" aria-hidden="true"></div>
     <div class="field-corner" aria-hidden="true"><span>WUYI / OPEN EXPERIMENT</span><span>IMAGES IN THE MAKING</span></div>
     <div class="seed-status" aria-hidden="true">COMPOSITION <span id="seed-label">00000000</span></div>
-    <div class="intro"><div class="intro-kicker"><i></i> 无衣 · 无限影像场 <i></i></div><h1>想象，没有终点<span>。</span></h1><p>每一帧，都是另一种可能。</p><span class="intro-caption">DRAG TO WANDER. STAY TO DISCOVER.</span></div>
+    <div class="intro"><div class="intro-kicker"><i></i> 无衣 · 生成无界</div><h1>想象，<br>无限发生<span>。</span></h1><p>穿过每一帧，抵达另一种可能。</p><span class="intro-caption">A CONTINUUM OF POSSIBILITIES — WUYI</span></div>
     <div class="field-tooltip" id="field-tooltip" aria-hidden="true"></div>
   </main>
   <div class="field-controls" role="group" aria-label="影像场控制">
     <button id="new-seed" class="new-seed">另一种可能 <span>↗</span></button>
-    <button id="pause" aria-pressed="false">暂停生长</button><span class="control-divider" aria-hidden="true"></span>
-    <button id="zoom-out" class="zoom-control" aria-label="缩小影像场">−</button><span class="zoom-value" id="zoom-value" aria-hidden="true">100%</span><button id="zoom-in" class="zoom-control" aria-label="放大影像场">＋</button><button id="reset" aria-label="回到影像场起点">归位</button>
+    <button id="pause" aria-pressed="false">暂停漫游</button><span class="control-divider" aria-hidden="true"></span>
+    <button id="zoom-out" class="zoom-control" aria-label="向后穿行">−</button><span class="zoom-value" id="zoom-value" aria-hidden="true">0000</span><button id="zoom-in" class="zoom-control" aria-label="向前穿行">＋</button><button id="reset" aria-label="回到影像场起点">归位</button>
   </div>
-  <footer class="bottom-bar"><div class="instructions" id="field-instructions"><span>拖动探索</span><span>滚轮 / 双指缩放</span><span>点击画面展开</span></div><span class="bottom-signature">IMAGINATION <em>∞</em></span><span class="placeholder-note">生成占位与实时程序纹理 · 非客户作品</span></footer>
+  <footer class="bottom-bar"><div class="instructions" id="field-instructions"><span>拖动游移</span><span>滚轮 / 双指穿行</span><span>点击影像展开</span></div><span class="bottom-signature">IMAGINATION <em>∞</em></span><span class="placeholder-note">AI 生成占位与程序纹理 · 非客户作品</span></footer>
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
   <dialog id="studio-dialog" class="panel"><div class="panel-head"><span class="eyebrow">WUYI / THE COLLECTIVE</span><button class="close" aria-label="关闭关于无衣">关闭 ×</button></div><h2>不同视角，<br>共同打开可能。</h2><p class="lead">无衣，是一群创作者的共同署名。</p><p>我们以 AI 为创作媒介，探索影像、叙事与想象之间的边界。工具带来新的可能，而感受、判断和表达，始终来自人。</p><p>这里是一片正在生长的影像实验场。每次相遇，都可以是另一种构图、另一种形态、另一段故事的开始。</p><div class="team-grid" id="team-grid"></div><div class="studio-quote">岂曰无衣，与子同袍。<span>INDEPENDENT MINDS.<br>SHARED IMAGINATION.</span></div></dialog>
 
-  <dialog id="index-dialog" class="panel index-panel"><div class="panel-head"><span class="eyebrow">WUYI / EXPERIMENT INDEX</span><button class="close" aria-label="关闭实验索引">关闭 ×</button></div><h2>一些可能，<br>正在显影。</h2><p class="index-intro">三组 AI 生成占位与实时程序纹理。用于探索网站的视觉语言，后续可替换为团队作品。</p><div class="index-grid" id="index-grid"></div></dialog>
+  <dialog id="index-dialog" class="panel index-panel"><div class="panel-head"><span class="eyebrow">WUYI / EXPERIMENT INDEX</span><button class="close" aria-label="关闭实验索引">关闭 ×</button></div><h2>一些可能，<br>正在显影。</h2><p class="index-intro">五组 AI 生成占位与程序纹理。用于探索网站的视觉语言，后续可替换为团队作品。</p><div class="index-grid" id="index-grid"></div></dialog>
 
   <dialog id="frame-dialog" class="frame-dialog"><button class="close" aria-label="关闭画面">关闭 ×</button><canvas id="frame-preview" class="frame-preview" aria-label="所选视觉实验的大图"></canvas><div class="frame-info"><div><h2 id="frame-title"></h2><p id="frame-note"></p></div><button id="save-frame" class="save-frame">保存这一帧 ↗</button></div></dialog>
 

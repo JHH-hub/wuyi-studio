@@ -1,0 +1,19 @@
+{
+  "assets": [
+    {
+      "file": "scarlet-motion.webp",
+      "source": "exec-39f346f7-3f85-4d4c-a040-48ab1a3200fb.png",
+      "generator": "Built-in image_gen",
+      "purpose": "AI-generated placeholder for WUYI website; not client work.",
+      "prompt": "Use case: stylized-concept. Asset type: individual cinematic art film still for WUYI experimental moving-image studio, landscape 16:9. A lone contemporary dancer in a sculptural vermilion-red silk garment suspended mid-leap above an obsidian-black stage, a single enormous billowing ribbon of rich scarlet silk curling into a sculptural impossible wave around them, close photographic material detail and real fabric tension, theatrical sculptural side lighting, Caravaggio-like falloff into black, extremely refined high-fashion editorial cinema, analog grain, dramatic negative space. No text, no typography, no logo, no UI, no collage, no frames. Full-bleed one coherent photograph, subject reads from a small thumbnail."
+    },
+    {
+      "file": "lunar-silence.webp",
+      "source": "exec-a7b6061f-bc85-4e9b-a076-94b052d71695.png",
+      "generator": "Built-in image_gen",
+      "purpose": "AI-generated placeholder for WUYI website; not client work.",
+      "prompt": "Use case: stylized-concept. Asset type: individual cinematic art film still for WUYI experimental moving-image studio, portrait 4:5. A small white horse standing perfectly still on the crest of a vast black volcanic sand dune, enormous pale pearl moon taking up the entire hazy sky behind it, monochrome black silver white landscape, windswept volcanic sand ripples, elegant minimal surreal composition, shot on medium-format film, exquisite photographic detail, luminous high contrast with atmospheric soft distance, contemplative and uncanny art-house cinema. No text, no typography, no logo, no UI, no collage, no frames. Full-bleed one coherent photograph, subject reads from a small thumbnail."
+    }
+  ]
+}
+
